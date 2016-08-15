@@ -1,0 +1,13 @@
+CHANGED,C:\Users\Desarrollo\AndroidStudioProjects\CalculadoraPagos\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\desarrollo\calculadorapagos\R$styleable$override.class
+CHANGED,C:\Users\Desarrollo\AndroidStudioProjects\CalculadoraPagos\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\desarrollo\calculadorapagos\R$layout$override.class
+CHANGED,C:\Users\Desarrollo\AndroidStudioProjects\CalculadoraPagos\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\desarrollo\calculadorapagos\R$integer$override.class
+CHANGED,C:\Users\Desarrollo\AndroidStudioProjects\CalculadoraPagos\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\desarrollo\calculadorapagos\R$override.class
+CHANGED,C:\Users\Desarrollo\AndroidStudioProjects\CalculadoraPagos\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\desarrollo\calculadorapagos\Calculadora$override.class
+CHANGED,C:\Users\Desarrollo\AndroidStudioProjects\CalculadoraPagos\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\desarrollo\calculadorapagos\R$style$override.class
+CHANGED,C:\Users\Desarrollo\AndroidStudioProjects\CalculadoraPagos\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\v7\appcompat\R$id$override.class
+CHANGED,C:\Users\Desarrollo\AndroidStudioProjects\CalculadoraPagos\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\desarrollo\calculadorapagos\Calculadora$1$override.class
+CHANGED,C:\Users\Desarrollo\AndroidStudioProjects\CalculadoraPagos\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\Desarrollo\AndroidStudioProjects\CalculadoraPagos\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\desarrollo\calculadorapagos\R$id$override.class
+CHANGED,C:\Users\Desarrollo\AndroidStudioProjects\CalculadoraPagos\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\desarrollo\calculadorapagos\Login$override.class
+CHANGED,C:\Users\Desarrollo\AndroidStudioProjects\CalculadoraPagos\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\desarrollo\calculadorapagos\R$string$override.class
+CHANGED,C:\Users\Desarrollo\AndroidStudioProjects\CalculadoraPagos\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\desarrollo\calculadorapagos\R$mipmap$override.class
