@@ -1,0 +1,4 @@
+ctrol + , busqueda en todo el proyecto
+ctrol + E + D dar formato
+ctrol + K + P Ver descripción del parametro
+Alt + F12 Vnetana de prevista
