@@ -12,16 +12,20 @@
     <bool name="abc_config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="abc_config_closeDialogWhenTouchOutside">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
-    <color name="Amarillo">#FFF6FE09</color>
-    <color name="Rojo">#ffcc0000</color>
-    <color name="Verde">#ff669900</color>
+    <color name="Amarillo">#FFFFF42B</color>
+    <color name="Azul">#0a60bc</color>
+    <color name="Blanco">#ffffff</color>
+    <color name="FondoAlter">#1de9b6</color>
+    <color name="FondoOriginal">#0097a7</color>
+    <color name="Gris">#78909c</color>
+    <color name="Rojo">#FFFC1525</color>
+    <color name="Verde">#00c853</color>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
-    <color name="azul">#ff0099cc</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
@@ -34,9 +38,17 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <color name="color1200">#00b8d4</color>
+    <color name="color500">#006064</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorAzul">#2196f3</color>
+    <color name="colorFucsiaConfirmacionInvalido">#FB005B</color>
+    <color name="colorNaranja">#f50057</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorVerde">#00c853</color>
+    <color name="colorVerdeConfirmacionValido">#00c853</color>
+    <color name="colorboton">#00b8d4</color>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
@@ -217,7 +229,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="app_name">StrooperProject</string>
+    <string name="app_name">Strooper</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

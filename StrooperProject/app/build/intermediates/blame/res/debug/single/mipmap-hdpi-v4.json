@@ -1,6 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Desarrollo\\AndroidStudioProjects\\StrooperProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Desarrollo\\AndroidStudioProjects\\StrooperProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "D:\\AndroidStudioProjects\\StrooperProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "D:\\AndroidStudioProjects\\StrooperProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Emerson\\Documents\\ANDROID STUDIO\\06-05-16Stropper\\senaStrooper\\Strooper\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Emerson\\Documents\\ANDROID STUDIO\\06-05-16Stropper\\senaStrooper\\Strooper\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
 ]
