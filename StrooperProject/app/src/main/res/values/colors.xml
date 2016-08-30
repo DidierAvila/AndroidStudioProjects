@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorboton">#00b8d4</color>
+    <color name="colorAzul">#2196f3</color>
+    <color name="colorNaranja">#f50057</color>
+    <color name="colorVerde">#00c853</color>
+    <color name="colorVerdeConfirmacionValido">#00c853</color>
+    <color name="colorFucsiaConfirmacionInvalido">#FB005B</color>
+    <color name="Amarillo">#FFFFF42B</color>
+    <color name="Azul">#0a60bc</color>
+    <color name="Rojo">#FFFC1525</color>
+    <color name="Verde">#00c853</color>
+    <color name="color500">#006064</color>
+    <color name="color1200">#00b8d4</color>
+    <color name="Blanco">#ffffff</color>
+    <color name="FondoAlter">#1de9b6</color>
+    <color name="FondoOriginal">#0097a7</color>
+    <color name="Gris">#78909c</color>
+</resources>

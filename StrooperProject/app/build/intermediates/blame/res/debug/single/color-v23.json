@@ -1,6 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Desarrollo\\AndroidStudioProjects\\StrooperProject\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "C:\\Users\\Desarrollo\\AndroidStudioProjects\\StrooperProject\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\color-v23\\abc_color_highlight_material.xml"
+        "merged": "C:\\Users\\Emerson\\Documents\\ANDROID STUDIO\\06-05-16Stropper\\senaStrooper\\Strooper\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "C:\\Users\\Emerson\\Documents\\ANDROID STUDIO\\06-05-16Stropper\\senaStrooper\\Strooper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color-v23\\abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\StrooperProject\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "D:\\AndroidStudioProjects\\StrooperProject\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color-v23\\abc_color_highlight_material.xml"
     }
 ]
