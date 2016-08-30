@@ -4,28 +4,28 @@
     api-level="19"
     density="xhdpi"
     format="7"
-    timestamp="278921451450126" >
+    timestamp="5171554416562" >
 
     <task
         name="javac"
-        duration="935" />
+        duration="476" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="238" />
+        duration="251" />
     <task
         name="verifier"
-        duration="29" />
+        duration="177" />
 
     <artifact
-        location="C:\Users\Desarrollo\AndroidStudioProjects\StrooperProject\app\build\outputs\apk\app-debug.apk"
+        location="C:\Users\Emerson\Documents\ANDROID STUDIO\06-05-16Stropper\senaStrooper\Strooper\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="278921451450126" >
+    <build timestamp="5171554416562" >
         <artifact
-            location="C:\Users\Desarrollo\AndroidStudioProjects\StrooperProject\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\Emerson\Documents\ANDROID STUDIO\06-05-16Stropper\senaStrooper\Strooper\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
 
