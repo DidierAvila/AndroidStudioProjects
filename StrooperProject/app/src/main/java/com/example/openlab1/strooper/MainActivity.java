@@ -3,6 +3,7 @@ package com.example.openlab1.strooper;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.CountDownTimer;
 import android.preference.DialogPreference;
 import android.support.v7.app.AlertDialog;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 
 import control.OnClickListenerJugador;
 import control.TablaControlJugador;
+import control.User;
 import modelo.Jugador;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,10 +38,19 @@ public class MainActivity extends AppCompatActivity {
         ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 validarCampos();
             }
         });
+
+        TextView helloPoker = (TextView)findViewById(R.id.txtwInicio);
+        Typeface Outwrite = Typeface.createFromAsset(getAssets(), "fonts/Outwrite.ttf");
+        Typeface stocky = Typeface.createFromAsset(getAssets(), "fonts/stocky.ttf");
+        helloPoker.setTypeface(Outwrite);
+
+        ingresar = (Button)findViewById(R.id.btnIngresar);
+        btnRegistrar = (Button)findViewById(R.id.btnRegistrar);
+        ingresar.setTypeface(stocky);
+        btnRegistrar.setTypeface(stocky);
     }
 
     public void controlador() {
@@ -48,15 +59,58 @@ public class MainActivity extends AppCompatActivity {
         txtClave = (EditText) findViewById(R.id.pwdClave);
         btnRegistrar = (Button) findViewById(R.id.btnRegistrar);
         lblMnsjConteo = (TextView) findViewById(R.id.lblMnsjConteo);
-
     }
 
 
     public void validarCampos() {
 
-        if (!txtUsuario.getText().toString().equals("")) {
-            if (!txtClave.getText().toString().equals("")) {
-                Jugador jugador = new Jugador();
+        User CurrentUser = new User();
+        Jugador player = new Jugador();
+
+        //CurrentUser.login(txtUsuario.getText().toString(),txtClave.getText().toString());
+        //CurrentUser.createPlayer(player);
+        //CurrentUser.getPlayer();
+        //CurrentUser.consultarPuntuacion();
+
+        if (txtUsuario.getText().toString().equals("")) {
+            intentos = intentos + 1;
+            controlIntentos();
+            txtUsuario.setText("");
+            txtUsuario.requestFocus();
+            Toast toscada = Toast.makeText(getApplicationContext(), "Debe ingresar un usuario!", Toast.LENGTH_SHORT);
+            //toscada.setGravity(Gravity.TOP|Gravity.LEFT,100,0);
+            toscada.show();
+        }
+
+        if (txtClave.getText().toString().equals("")) {
+            intentos = intentos + 1;
+            controlIntentos();
+            txtClave.setText("");
+            txtClave.requestFocus();
+            Toast toscada = Toast.makeText(getApplicationContext(), "Debe ingresar una contraseña!", Toast.LENGTH_SHORT);
+            //toscada.setGravity(Gravity.TOP|Gravity.LEFT,100,0);
+            toscada.show();
+        }
+        String currentUser = txtUsuario.getText().toString();
+        String currentPassword = txtClave.getText().toString();
+        if(CurrentUser.login(currentUser,currentPassword)){
+            if(CurrentUser.UsuarioLogueado!=null){
+                Intent i = new Intent(MainActivity.this, Bienvenido.class);
+                        //aca se le ponen los datos a pasar a a la otra actividad o se hace una animación
+                i.putExtra("usuario" , CurrentUser.UsuarioLogueado);
+                i.putExtra("nick",txtUsuario.getText().toString());
+                startActivity(i);
+                this.finish();
+            }
+        }else {
+                    intentos = intentos + 1;
+                    controlIntentos();
+                    txtUsuario.setText("");
+                    txtClave.setText("");
+                    Toast toscada = Toast.makeText(getApplicationContext(), "Usuario o contraseña incorrectos!", Toast.LENGTH_SHORT);
+                    toscada.show();
+        }
+                /*Jugador jugador = new Jugador();
                 TablaControlJugador tablaControl = new TablaControlJugador(this);
                 if (tablaControl.acceder(txtUsuario.getText().toString(),txtClave.getText().toString()) != null) {
                     //txtUsuario.getText().toString().equals("emerson") && txtClave.getText().toString().equals("12345")
@@ -72,16 +126,16 @@ public class MainActivity extends AppCompatActivity {
                     controlIntentos();
                     txtUsuario.setText("");
                     txtClave.setText("");
-                    Toast toscada = Toast.makeText(getApplicationContext(), "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT);
+                    Toast toscada = Toast.makeText(getApplicationContext(), "Usuario o contraseña incorrectos!", Toast.LENGTH_SHORT);
                     //toscada.setGravity(Gravity.TOP|Gravity.LEFT,100,0);
                     toscada.show();
-                }
-            } else {
+                }*/
+            /*} else {
                 intentos = intentos + 1;
                 controlIntentos();
                 txtClave.setText("");
                 txtClave.requestFocus();
-                Toast toscada = Toast.makeText(getApplicationContext(), "Debe ingresar una contraseña", Toast.LENGTH_SHORT);
+                Toast toscada = Toast.makeText(getApplicationContext(), "Debe ingresar una contraseña!", Toast.LENGTH_SHORT);
                 //toscada.setGravity(Gravity.TOP|Gravity.LEFT,100,0);
                 toscada.show();
             }
@@ -90,10 +144,10 @@ public class MainActivity extends AppCompatActivity {
             controlIntentos();
             txtUsuario.setText("");
             txtUsuario.requestFocus();
-            Toast toscada = Toast.makeText(getApplicationContext(), "Debe ingresar un usuario", Toast.LENGTH_SHORT);
+            Toast toscada = Toast.makeText(getApplicationContext(), "Debe ingresar un usuario!", Toast.LENGTH_SHORT);
             //toscada.setGravity(Gravity.TOP|Gravity.LEFT,100,0);
             toscada.show();
-        }
+        }*/
     }
 
     public void controlIntentos() {
@@ -149,4 +203,3 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-

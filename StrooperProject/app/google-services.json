@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "709195910287",
+    "firebase_url": "https://strooperproject.firebaseio.com",
+    "project_id": "strooperproject",
+    "storage_bucket": "strooperproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709195910287:android:424402b3b539c1a3",
+        "android_client_info": {
+          "package_name": "com.example.openlab1.strooper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709195910287-8fgheb0k9jerdnjilk7rqggg176s026c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.openlab1.strooper",
+            "certificate_hash": "185c18ae61f4be1a7bcf51d66cd38ee260faba00"
+          }
+        },
+        {
+          "client_id": "709195910287-3m83ujtuj12i6utceeb74burc6fgg92m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWkdCE8FAqckTi7zLtJdTzNAIll2sJyXI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709195910287-3m83ujtuj12i6utceeb74burc6fgg92m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

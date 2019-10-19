@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.openlab1.strooper.juego"
     android:padding="0dp"
-    android:background="@color/FondoOriginal"
+    android:background="#6DD0FF"
     android:clickable="false"
     android:id="@+id/fondo">
 
@@ -27,14 +27,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="@color/Gris"
+            android:background="#58B8CF"
             android:id="@+id/linear">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@android:color/holo_orange_light" >
+                android:background="#ECE9F9" >
 
                 <ImageView
                     android:layout_width="115dp"
@@ -67,6 +67,49 @@
                     android:layout_weight="1" />
             </LinearLayout>
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/lbPuntos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Puntos:"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="26dp" />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/lblPuntos"
+                    android:textSize="22dp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Vidas:"
+                    android:id="@+id/txtVida"
+                    android:textSize="26dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/txtvIntentos"
+                    android:textSize="22dp"
+                    android:width="90dp"
+                    android:textAlignment="center"
+                    android:text="0" />
+
+            </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,6 +118,7 @@
                 android:id="@+id/lblTiempo"
                 android:textAlignment="center"
                 android:textSize="25dp"
+                android:layout_marginTop="8dp"
                 android:textColor="#a80606" />
 
             <TextView
@@ -83,7 +127,7 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="3"
                 android:id="@+id/lblSegundos"
-                android:textSize="73dp"
+                android:textSize="83dp"
                 android:textAlignment="center"
                 android:textStyle=""
                 android:onClick="JugarYa"
@@ -113,40 +157,17 @@
                 android:text="Verde"
                 android:id="@+id/lblcolor"
                 android:textStyle="bold"
-                android:textSize="65dp"
+                android:textSize="70dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:textAlignment="center"
                 android:textColor="@color/colorAzul" />
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:id="@+id/txtvIntentos"
-                    android:textSize="30dp"
-                    android:width="90dp"
-                    android:textAlignment="center"
-                    android:background="@color/colorVerde"
-                    android:text="0" />
-
-                <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Intentos"
-                    android:id="@+id/textView8"
-                    android:textSize="30dp"
-                    android:background="@color/colorNaranja" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -154,26 +175,26 @@
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="0"
                     android:id="@+id/txtvValorCorrecto"
-                    android:textSize="30dp"
+                    android:textSize="38dp"
                     android:width="90dp"
                     android:textAlignment="center"
-                    android:background="@color/colorNaranja" />
+                    android:background="#F02E32" />
 
                 <TextView
+                    android:id="@+id/txtvCorrectos"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:background="#3BA848"
                     android:text="Correctos"
-                    android:id="@+id/txtvCorrectos"
-                    android:textSize="30dp"
-                    android:background="@color/colorVerde"
-                    android:phoneNumber="false" />
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="38dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -181,7 +202,7 @@
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="0"
                     android:id="@+id/txtvValorInCorrecto"
-                    android:textSize="30dp"
+                    android:textSize="38dp"
                     android:width="90dp"
                     android:textAlignment="center"
                     android:background="@color/colorVerde" />
@@ -192,34 +213,11 @@
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="Incorrectos"
                     android:id="@+id/txtvIncorrectos"
-                    android:textSize="30dp"
-                    android:background="@color/colorNaranja" />
+                    android:textSize="38dp"
+                    android:background="#F02E32" />
             </LinearLayout>
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="0"
-                    android:id="@+id/lblPuntos"
-                    android:textSize="30dp"
-                    android:width="90dp"
-                    android:textAlignment="center"
-                    android:background="@color/colorNaranja" />
-
-                <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Puntos"
-                    android:textSize="30dp"
-                    android:background="@color/colorVerde" />
-            </LinearLayout>
 
         </LinearLayout>
 
@@ -234,13 +232,13 @@
             android:gravity="center_horizontal">
 
             <ImageView
+                android:id="@+id/imgOk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imgOk"
-                android:src="@drawable/up"
                 android:layout_marginRight="35dp"
+                android:longClickable="false"
                 android:onClick="imgOK"
-                android:longClickable="false" />
+                android:src="@drawable/up" />
 
             <ImageView
                 android:layout_width="wrap_content"

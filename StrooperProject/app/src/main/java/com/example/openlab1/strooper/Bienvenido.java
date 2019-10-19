@@ -1,6 +1,7 @@
 package com.example.openlab1.strooper;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,13 +18,16 @@ public class Bienvenido extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bienvenido);
+        Typeface Outwrite = Typeface.createFromAsset(getAssets(), "fonts/Outwrite.ttf");
 
        inicializarControles();
 
         b = getIntent().getExtras();
         usuario = b.getString("usuario");
         nick = b.getString("nick");
-        lblUsuarioRe.setText(usuario);
+        lblUsuarioRe.setText("Hola: "+usuario);
+        lblUsuarioRe.setTypeface(Outwrite);
+
 
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,11 +50,14 @@ public class Bienvenido extends AppCompatActivity {
     }
 
     public void inicializarControles(){
+        Typeface stocky = Typeface.createFromAsset(getAssets(), "fonts/stocky.ttf");
         lblUsuarioRe = (TextView)findViewById(R.id.lblUsuarioRe);
         btnPlay = (Button)findViewById(R.id.btnPlay);
         btnCustom = (Button)findViewById(R.id.btnCuston);
         btnScore = (Button)findViewById(R.id.btnScore);
+        btnPlay.setTypeface(stocky);
+        btnCustom.setTypeface(stocky);
+        btnScore.setTypeface(stocky);
     }
-
 
 }

@@ -125,10 +125,13 @@ public class OnClickListenerJugador implements View.OnClickListener{
                                     Toast.makeText(context, "No se puede registar el usuario", Toast.LENGTH_SHORT).show();
                                 } else {
                                     Jugador jugador = new Jugador();
+                                    User UserObject = new User();
                                     jugador.setNombre(txtNombre.getText().toString());
                                     jugador.setNick(txtNick.getText().toString());
                                     jugador.setClave(txtClave1.getText().toString());
-                                    boolean fueRegistrado = new TablaControlJugador(context).crear(jugador);
+                                    jugador.setPuntuacion(0);
+                                    boolean fueRegistrado = UserObject.createPlayer(jugador);
+                                    //boolean fueRegistrado = new TablaControlJugador(context).crear(jugador);
                                     if (fueRegistrado) {
                                         Toast.makeText(context, "Jugador registrado con exito", Toast.LENGTH_SHORT).show();
                                     } else {

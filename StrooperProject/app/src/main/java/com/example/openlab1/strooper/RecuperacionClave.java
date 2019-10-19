@@ -1,5 +1,6 @@
 package com.example.openlab1.strooper;
 
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,10 @@ public class RecuperacionClave extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recuperacion_clave);
 
+        TextView titulo = (TextView)findViewById(R.id.txtvwTitulo);
+        Typeface Outwrite = Typeface.createFromAsset(getAssets(), "fonts/Outwrite.ttf");
+        titulo.setTypeface(Outwrite);
+
         inicializarControles();
         generar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +50,9 @@ public class RecuperacionClave extends AppCompatActivity {
         });
     }
     public void inicializarControles(){
+        Typeface stocky = Typeface.createFromAsset(getAssets(), "fonts/stocky.ttf");
         generar = (Button) findViewById(R.id.btnGenerarClave);
+        generar.setTypeface(stocky);
         lblContraseña = (TextView) findViewById(R.id.lblContraseña);
         nombre = (EditText) findViewById(R.id.txtNombre);
         nick = (EditText) findViewById(R.id.txtNick);
@@ -53,6 +60,4 @@ public class RecuperacionClave extends AppCompatActivity {
 
         lblContraseña.setTextSize(0);
     }
-
-
 }

@@ -7,26 +7,27 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#58B8CF"
     tools:context="com.example.openlab1.strooper.HigthStore">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txtVwTitulo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="PUNTUACIONES"
-        android:id="@+id/textView4"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp"
-        android:textSize="30dp"
-        android:textColor="@color/Azul" />
+        android:layout_marginTop="20dp"
+        android:text="puntuaciones"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="46dp" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="71dp"
+        android:layout_below="@+id/txtVwTitulo"
+        android:layout_marginTop="30dp"
         android:layout_alignParentEnd="true">
 
         <LinearLayout

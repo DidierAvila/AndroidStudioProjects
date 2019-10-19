@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondodos"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -10,69 +11,65 @@
     tools:context="com.example.openlab1.strooper.RecuperacionClave">
 
     <TextView
+        android:id="@+id/txtvwTitulo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Recuperación de contraseña"
-        android:id="@+id/textView3"
-        android:layout_marginTop="48dp"
-        android:height="40dp"
-        android:textSize="25dp"
-        android:textAlignment="center"
-        android:textColor="#00BFA5"
+        android:layout_height="84dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtNombre"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true"
-        android:textAlignment="center"
-        android:text="Ingrese su nombre"
-        android:layout_marginBottom="20dp" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtNick"
-        android:textAlignment="center"
-        android:text="Ingrese su nick"
-        android:layout_below="@+id/txtNombre"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Su nueva contraseña es:"
-        android:id="@+id/lblContraseña"
-        android:layout_marginTop="20dp"
-        android:height="40dp"
-        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:height="46dp"
+        android:text="Recuperar clave"
         android:textAlignment="center"
         android:textColor="#00BFA5"
-        android:layout_below="@+id/txtNick"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="0dp" />
+        android:textSize="40dp" />
 
     <EditText
+        android:id="@+id/txtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtNuevaClave"
-        android:textAlignment="center"
-        android:layout_below="@+id/lblContraseña"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="10dp" />
+        android:layout_below="@+id/txtvwTitulo"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        android:hint="Ingrese su nombre"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/txtNick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtNombre"
+        android:hint="Ingrese su nick"
+        android:textAlignment="center" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Generar Contraseña"
         android:id="@+id/btnGenerarClave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNick"
+        android:layout_marginTop="20dp"
         android:width="300dp"
         android:background="#4fc3f7"
-        android:textSize="17dp"
-        android:layout_below="@+id/txtNuevaClave"
-        android:layout_centerHorizontal="true" />
+        android:text="Generar Contraseña"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/lblContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnGenerarClave"
+        android:height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Su nueva contraseña es:"
+        android:textAlignment="center"
+        android:textColor="#00BFA5"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/txtNuevaClave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblContraseña"
+        android:textAlignment="center" />
+
 </RelativeLayout>

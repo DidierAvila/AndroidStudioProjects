@@ -3,6 +3,7 @@ package com.example.openlab1.strooper;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -28,7 +29,7 @@ import control.TablaControlJugador;
 import modelo.Jugador;
 
 public class juego extends AppCompatActivity implements SensorEventListener{
-    TextView lblSegundos,segundos,color, lbltiempo, cantidadCorrectos, cantidadIncorrectos, cantidadIntentos,puntos;
+    TextView lblSegundos,segundos,color, txtvida, lbltiempo,lblColor, lblCorrt,lblIncrrt, lbpunto,cantidadCorrectos, cantidadIncorrectos, cantidadIntentos,puntos;
     ImageView ImgOk, ImgKo;
     MediaPlayer gameOver,fatality;
     LinearLayout linear;
@@ -45,7 +46,6 @@ public class juego extends AppCompatActivity implements SensorEventListener{
     private long acomuladdorTiempo;
     private int acomuladorPuntos = 0;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,10 +57,15 @@ public class juego extends AppCompatActivity implements SensorEventListener{
 
     }
     public void inicializarControles(){
+        Typeface Outwrite = Typeface.createFromAsset(getAssets(), "fonts/Outwrite.ttf");
+        Typeface stocky = Typeface.createFromAsset(getAssets(), "fonts/stocky.ttf");
         lblSegundos = (TextView)findViewById(R.id.lblSegundos);
         segundos = (TextView)findViewById(R.id.segundos);
         color = (TextView)findViewById(R.id.lblcolor);
         lbltiempo = (TextView)findViewById(R.id.lblTiempo);
+        lblColor = (TextView)findViewById(R.id.lblcolor);
+        lbpunto = (TextView)findViewById(R.id.lbPuntos);
+        txtvida = (TextView)findViewById(R.id.txtVida);
         //btnPlay = (Button)findViewById(R.id.btnPlay);
         //btnCustom = (Button)findViewById(R.id.btnPlay);
         //btnScore = (Button)findViewById(R.id.btnPlay);
@@ -68,9 +73,13 @@ public class juego extends AppCompatActivity implements SensorEventListener{
         ImgKo = (ImageView) findViewById(R.id.imgKo);
         cantidadCorrectos =(TextView) findViewById(R.id.txtvValorCorrecto);
         cantidadIncorrectos=(TextView) findViewById(R.id.txtvValorInCorrecto);
+        lblCorrt = (TextView) findViewById(R.id.txtvCorrectos);
+        lblIncrrt = (TextView) findViewById(R.id.txtvIncorrectos);
         cantidadIntentos=(TextView) findViewById(R.id.txtvIntentos);
         puntos=(TextView) findViewById(R.id.lblPuntos);
         cuenta.cancel();
+
+        lbltiempo.setTypeface(stocky);
 
         lblSegundos.setText("Jugar");
         lbltiempo.setText("");
@@ -80,8 +89,8 @@ public class juego extends AppCompatActivity implements SensorEventListener{
         ImgKo.setEnabled(false);
 
         //inicializar Sonido
-        gameOver = MediaPlayer.create(this,R.raw.gor);
-        fatality = MediaPlayer.create(this,R.raw.fatality);
+        gameOver = MediaPlayer.create(this,R.raw.error);
+        fatality = MediaPlayer.create(this,R.raw.fail);
         //layout
         linear = (LinearLayout) findViewById(R.id.linear);
         //sensor
@@ -89,6 +98,14 @@ public class juego extends AppCompatActivity implements SensorEventListener{
         sensor = sm.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         fondo  = (RelativeLayout) findViewById(R.id.fondo);
         sm.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL);
+
+        lbpunto.setTypeface(stocky);
+        txtvida.setTypeface(stocky);
+        lblIncrrt.setTypeface(stocky);
+        lblCorrt.setTypeface(stocky);
+        cantidadCorrectos.setTypeface(stocky);
+        cantidadIncorrectos.setTypeface(stocky);
+        lblSegundos.setTypeface(stocky);
     }
 
 CountDownTimer cuenta = new CountDownTimer(4000,1000) {
@@ -107,16 +124,12 @@ CountDownTimer cuenta = new CountDownTimer(4000,1000) {
 
    public void JugarYa(View view) {
         if(lblSegundos.getText().toString().equalsIgnoreCase("Jugar")){
-            setIntentos(0);
+            setIntentos(5);
             setContadorCorrectos(0);
             setContadorIncorrectos(0);
             setAcomuladorPuntos(0);
             lbltiempo.setText("TIEMPO");
             segundos.setText("Segundos");
-           /* lbltiempo.setTextSize(25);
-            lblSegundos.setTextSize(87);
-            color.setTextSize(67);
-            segundos.setTextSize(17);*/
             cantidadIntentos.setText(getIntentos()+"");
             cantidadCorrectos.setText(getContadorCorrectos()+"");
             cantidadIncorrectos.setText(getContadorIncorrectos()+"");
@@ -125,7 +138,15 @@ CountDownTimer cuenta = new CountDownTimer(4000,1000) {
             ImgKo.setEnabled(true);
             cambiarTexto();
             cuenta.start();
+            reanudar();
         }
+    }
+
+    private void reanudar(){
+        lblSegundos.setTextSize(83);
+        lbltiempo.setText("TIEMPO");
+        lbltiempo.setTextSize(25);
+        lblColor.setTextSize(70);
     }
 
     private void calificar(){}
@@ -184,10 +205,6 @@ CountDownTimer cuenta = new CountDownTimer(4000,1000) {
     public void imgOK(View view) {
         int contadorCorrectos = getContadorCorrectos();
         int contadorIncorrectos = getContadorIncorrectos();
-        int intentos = getIntentos();
-        intentos = intentos + 1;
-        setIntentos(intentos);
-        cantidadIntentos.setText(intentos+"");
 
         if(getValidar()== true){
             contadorCorrectos = contadorCorrectos + 1;
@@ -197,6 +214,10 @@ CountDownTimer cuenta = new CountDownTimer(4000,1000) {
             puntuacion();
             cambio1000puntos(getAcomuladorPuntos());
         }else{
+            int intentos = getIntentos();
+            intentos = intentos - 1;
+            setIntentos(intentos);
+            cantidadIntentos.setText(intentos+"");
             contadorIncorrectos = contadorIncorrectos + 1;
             cantidadIncorrectos.setText(contadorIncorrectos+"");
             setContadorIncorrectos(contadorIncorrectos);
@@ -205,7 +226,6 @@ CountDownTimer cuenta = new CountDownTimer(4000,1000) {
         //Se puede convertir en un metodo
         if(contadorIncorrectos == 5){
             hasPerdido();
-
         }else {
             cambiarTexto();
             cuenta.cancel();
@@ -216,12 +236,12 @@ CountDownTimer cuenta = new CountDownTimer(4000,1000) {
     public void imgKO(View view) {
         int contadorIncorrectos = getContadorIncorrectos();
         int contadorCorrectos = getContadorCorrectos();
-        int intentos = getIntentos();
-        intentos = intentos + 1;
-        setIntentos(intentos);
-        cantidadIntentos.setText(intentos+"");
 
         if(getValidar()== true){
+            int intentos = getIntentos();
+            intentos = intentos - 1;
+            setIntentos(intentos);
+            cantidadIntentos.setText(intentos+"");
             contadorIncorrectos = contadorIncorrectos + 1;
             cantidadIncorrectos.setText(contadorIncorrectos+"");
             setContadorIncorrectos(contadorIncorrectos);
@@ -237,7 +257,6 @@ CountDownTimer cuenta = new CountDownTimer(4000,1000) {
         //Se puede convertir en un metodo
         if(contadorIncorrectos == 5){
             hasPerdido();
-
         }else {
             cambiarTexto();
             cuenta.cancel();
@@ -248,12 +267,12 @@ CountDownTimer cuenta = new CountDownTimer(4000,1000) {
     public void hasPerdido(){
         cuenta.cancel();
         lblSegundos.setText("Jugar");
-        lblSegundos.setTextSize(50);
+        lblSegundos.setTextSize(83);
         lbltiempo.setText("");
         lbltiempo.setTextSize(0);
         segundos.setText("");
         color.setText("Has perdido");
-        color.setTextSize(55);
+        color.setTextSize(70);
         color.setTextColor(this.getResources().getColor(R.color.Rojo));
         ImgOk.setEnabled(false);
         ImgKo.setEnabled(false);
@@ -263,13 +282,8 @@ CountDownTimer cuenta = new CountDownTimer(4000,1000) {
         jugador.setPuntuacion(getAcomuladorPuntos());
         jugador.setNick(nick);
         boolean puntuacionRegistrada = new TablaControlJugador(juego.this).puntuacion(jugador);
-       /* if (puntuacionRegistrada) {
-            Toast.makeText(this, "Jugador registrado con exito", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Ha ocurrido un error en el registro", Toast.LENGTH_SHORT).show();
-        }*/
-
     }
+
     public void puntuacion(){
         if(getAcomuladdorTiempo() == 1){
             setAcomuladorPuntos(getAcomuladorPuntos() + 7);
@@ -289,7 +303,7 @@ CountDownTimer cuenta = new CountDownTimer(4000,1000) {
         }
         else if(ac > 1300){
             linear.setBackgroundColor(this.getResources().getColor(R.color.color1200));
-        }//
+        }
     }
 
     public boolean getValidar() { return Validar; }

@@ -26,7 +26,6 @@
         android:id="@+id/lblNick"
         android:textAlignment="center"
         android:layout_weight="0.03"
-        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="4dp"
         android:hint="Nick" />
 
@@ -61,7 +60,7 @@
         android:layout_weight="0.03"
         android:textAlignment="center"
         android:hint="Confirmar clave"
-        android:layout_marginBottom="2dp" />
+        android:layout_marginBottom="4dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -74,14 +73,15 @@
         android:layout_weight="0.03" />
 
     <TextView
+        android:id="@+id/lblCantidad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Jugadores registrados:  "
-        android:id="@+id/lblCantidad"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="2dp"
         android:layout_weight="0.10"
+        android:paddingTop="3dp"
+        android:text="Jugadores registrados:  "
         android:textAlignment="center"
-        android:paddingTop="3dp" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </LinearLayout>
